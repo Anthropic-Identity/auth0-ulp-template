@@ -5,7 +5,9 @@ Deploys a Universal Login page template to an Auth0 tenant via the Management AP
 - A custom domain configured for the tenant
 - Load the login page on the custom domain, not the `auth0` domain
 
-## Setup
+## Usage
+
+First, setup a custom domain for the tenant.
 
 Copy `.env.example` to `.env` and fill in your values:
 
@@ -18,9 +20,7 @@ Install dependencies:
 npm install
 ```
 
-2. Edit `template.html` as needed.
-
-## Usage
+Edit `template.liquid` as needed then push to the tenant:
 
 ```
 npm run push
@@ -28,7 +28,10 @@ npm run push
 
 This pushes the contents of `template.liquid` to your tenant's Universal Login template.
 
+Finally, load a login page on the custom domain (not the `auth0` domain) to see the changes. 
+
 ## References
 
+- [Custom Domains](https://auth0.com/docs/customize/custom-domains)
 - [Customize ULP templates](https://auth0.com/docs/customize/login-pages/universal-login/customize-templates)
 - [Management API — PUT universal login](https://auth0.com/docs/api/management/v2/branding/put-universal-login)
