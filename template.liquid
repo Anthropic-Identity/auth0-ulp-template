@@ -14,7 +14,8 @@
     </style>
     {% endif %}
   </head>
-  <body class="_widget-auto-layout" data-prompt="{{prompt.name}}">
+  <body class="_widget-auto-layout" data-prompt="{{prompt.name}}" data-screen="{{prompt.screen.name}}">
     {%- auth0:widget -%}
+    <script>console.log("Loading a custom page template ...");</script>
   </body>
 </html>
