@@ -1,0 +1,13 @@
+{
+  "type": "module",
+  "scripts": {
+    "push": "npx tsx push.ts"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.39",
+    "tsx": "^4.21.0"
+  }
+}
