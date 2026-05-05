@@ -7,12 +7,15 @@ Deploys a Universal Login page template to an Auth0 tenant via the Management AP
 
 ## Usage
 
-First, setup a custom domain for the tenant.
+First, setup a [Custom Domain](https://auth0.com/docs/customize/custom-domains) for your tenant.
 
-Copy `.env.example` to `.env` and fill in your values:
+Next, [create a machine-to-machine application](https://auth0.com/docs/get-started/auth0-overview/create-applications/machine-to-machine-apps) authorized for the Management API with at least the `update:branding` scope.
 
-- `AUTH0_DOMAIN` — your tenant domain (e.g. `example.auth0.com`)
-- `AUTH0_CLIENT_ID` amd `AUTH0_CLIENT_SECRET` — a Machine-to-Machine app authorized on the Management API with the `update:branding` scope
+Copy `.env.example` to `.env` and fill in these values using the application above:
+
+- `AUTH0_DOMAIN`: tenant domain (e.g. `example.auth0.com`)
+- `AUTH0_CLIENT_ID`: client ID from the application above
+- `AUTH0_CLIENT_SECRET`: client secret from the application above
 
 Install dependencies:
 
@@ -32,6 +35,5 @@ Finally, load a login page on the custom domain (not the `auth0` domain) to see 
 
 ## References
 
-- [Custom Domains](https://auth0.com/docs/customize/custom-domains)
 - [Customize ULP templates](https://auth0.com/docs/customize/login-pages/universal-login/customize-templates)
 - [Management API — PUT universal login](https://auth0.com/docs/api/management/v2/branding/put-universal-login)
