@@ -37,3 +37,4 @@ Finally, load a login page on the custom domain (not the `auth0` domain) to see 
 
 - [Customize ULP templates](https://auth0.com/docs/customize/login-pages/universal-login/customize-templates)
 - [Management API — PUT universal login](https://auth0.com/docs/api/management/v2/branding/put-universal-login)
+- [Management API — DELETE universal login](https://auth0.com/docs/api/management/v2/branding/put-universal-login)

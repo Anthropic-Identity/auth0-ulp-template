@@ -1,7 +1,8 @@
 {
   "type": "module",
   "scripts": {
-    "put": "npx tsx put.ts"
+    "put": "npx tsx put.ts",
+    "delete": "npx tsx delete.ts"
   },
   "dependencies": {
     "dotenv": "^17.4.2"
