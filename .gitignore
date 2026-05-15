@@ -1,4 +1,5 @@
 node_modules/
 .claude/
+tmp/
 .env*
 !.env.example
