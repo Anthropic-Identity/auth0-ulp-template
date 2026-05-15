@@ -2,6 +2,11 @@
 <html lang="{{locale}}" dir="{{dir}}">
   <head>
     {%- auth0:head -%} 
+    <style>
+      html, body {
+        background-color: #81cdc6
+      }
+    </style>
     {% if application.logo_url %}
     <style>
       #custom-prompt-logo {
