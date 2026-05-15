@@ -1,6 +1,7 @@
 {
   "type": "module",
   "scripts": {
+    "get": "npx tsx get.ts",
     "put": "npx tsx put.ts",
     "delete": "npx tsx delete.ts"
   },
