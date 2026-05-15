@@ -27,3 +27,4 @@ if (!updateRes.ok) {
 }
 
 console.log("Template updated successfully.");
+process.exit(0);

@@ -17,3 +17,4 @@ if (!res.ok) {
 
 const { body } = await res.json() as { body: string };
 console.log(body);
+process.exit(0);

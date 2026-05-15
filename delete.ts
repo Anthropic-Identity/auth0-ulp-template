@@ -20,3 +20,4 @@ if (!deleteRes.ok) {
 }
 
 console.log("Template deleted successfully.");
+process.exit(0);
