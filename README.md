@@ -13,7 +13,7 @@ Watch the demo video for a walk-through:
 
 First, setup a [Custom Domain](https://auth0.com/docs/customize/custom-domains) for your tenant.
 
-Next, [create a machine-to-machine application](https://auth0.com/docs/get-started/auth0-overview/create-applications/machine-to-machine-apps) authorized for the Management API with at least the `update:branding` scope.
+Next, [create a machine-to-machine application](https://auth0.com/docs/get-started/auth0-overview/create-applications/machine-to-machine-apps) authorized for the Management API with at least the `get:branding`, `update:branding`, and `delete:branding` scopes, based on the actions you want to take.
 
 Copy `.env.example` to `.env` and fill in these values using the application above:
 
