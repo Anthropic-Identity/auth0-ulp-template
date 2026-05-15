@@ -1,37 +1,12 @@
-import "dotenv/config";
 import { readFileSync } from "fs";
+import { confirm, getAccessToken, getEnv } from "./mgmt.ts";
 
-const domain = process.env.AUTH0_DOMAIN;
-const clientId = process.env.AUTH0_CLIENT_ID;
-const clientSecret = process.env.AUTH0_CLIENT_SECRET;
-
-if (!domain || !clientId || !clientSecret) {
-  console.error("Missing required env vars: AUTH0_DOMAIN, AUTH0_CLIENT_ID, AUTH0_CLIENT_SECRET");
-  process.exit(1);
-}
+const { domain, clientId, clientSecret } = getEnv();
 
 console.log(`Pushing to tenant: ${domain}`);
-await new Promise((resolve) => setTimeout(resolve, 3000));
+await confirm("Confirm push");
 
-// Get Management API token via client credentials
-const tokenRes = await fetch(`https://${domain}/oauth/token`, {
-  method: "POST",
-  headers: { "Content-Type": "application/json" },
-  body: JSON.stringify({
-    grant_type: "client_credentials",
-    client_id: clientId,
-    client_secret: clientSecret,
-    audience: `https://${domain}/api/v2/`,
-  }),
-});
-
-if (!tokenRes.ok) {
-  console.error("Failed to get token:", await tokenRes.text());
-  process.exit(1);
-}
-
-const { access_token } = await tokenRes.json() as { access_token: string };
-console.log("Token acquired.");
+const access_token = await getAccessToken(domain, clientId, clientSecret);
 
 // Read template
 const template = readFileSync("template.liquid", "utf-8");
