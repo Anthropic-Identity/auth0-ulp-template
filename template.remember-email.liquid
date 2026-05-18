@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="{{locale}}" dir="{{dir}}">
+  <head>
+    {%- auth0:head -%} 
+  </head>
+  <body class="_widget-auto-layout" data-prompt="{{prompt.name}}" data-screen="{{prompt.screen.name}}">
+    {%- auth0:widget -%}
+    <script>
+      const storageKey = "login_email";
+      const storeEmail = (event) => {
+          window.sessionStorage.setItem(storageKey, event.target.value);
+      }
+
+      const idElement = document.getElementById("username");
+      if (idElement) {
+        idElement.value = window.sessionStorage.getItem(storageKey);
+        idElement.addEventListener("change", storeEmail);
+      }
+      
+      const emailElement = document.getElementById("email");
+      if (emailElement) {
+        emailElement.value = window.sessionStorage.getItem(storageKey);
+        emailElement.addEventListener("change", (event) => storeEmail);
+      }
+    </script>
+  </body>
+</html>
