@@ -8,9 +8,9 @@ Deploys a Universal Login page template to an Auth0 tenant via the Management AP
 ## Templates
 
 - **[Testing template](./template.liquid)** - Testing template that changes the background color and logs a message in the console.
-- **[Application logos](./template.app-logos.liquid)** - Shows the application logo, if one is saved for the application requesting login, falling back to the main tenant logo. [Demo video ›](https://drive.google.com/file/d/131S6rn4zMk-QREYHcqwtUK5CczoT42d1/view?usp=drive_link)
-- **[Hide password confirmation](./template.omit-password-confirm.liquid)** - Hides the password confirmation field when resetting a password. [Demo video ›](https://drive.google.com/file/d/1jAERaOb22H2Rl7-CG5wHRY7PDigTyDbw/view?usp=sharing)
-- **[Remember email address](./template.omit-password-confirm.liquid)** - Keeps the email address entered in the field when switching between login and signup. [Demo video ›](https://drive.google.com/file/d/13hVJIB7DXBqCVYPlAkSKEkwosRvDRa0n/view?usp=sharing)
+- **[Application logos](./template.app-logos.liquid)** - Shows the application logo, if one is saved for the application requesting login, falling back to the main tenant logo ([demo](https://drive.google.com/file/d/131S6rn4zMk-QREYHcqwtUK5CczoT42d1/view?usp=drive_link))
+- **[Hide password confirmation](./template.omit-password-confirm.liquid)** - Hides the password confirmation field when resetting a password ([demo](https://drive.google.com/file/d/1jAERaOb22H2Rl7-CG5wHRY7PDigTyDbw/view?usp=sharing))
+- **[Remember email address](./template.remember-email.liquid)** - Keeps the email address entered in the field when switching between login and signup ([demo](https://drive.google.com/file/d/13hVJIB7DXBqCVYPlAkSKEkwosRvDRa0n/view?usp=sharing))
 
 ## Usage
 
