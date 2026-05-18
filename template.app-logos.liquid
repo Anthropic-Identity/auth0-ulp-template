@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="{{locale}}" dir="{{dir}}">
+  <head>
+    {%- auth0:head -%} 
+    {% if application.logo_url %}
+    <style>
+      #custom-prompt-logo {
+        background-image: url("{{ application.logo_url }}");
+        display: block;
+      }
+      #prompt-logo-center {
+        display: none;
+      }
+    </style>
+    {% endif %}
+  </head>
+  <body class="_widget-auto-layout" data-prompt="{{prompt.name}}" data-screen="{{prompt.screen.name}}">
+    {%- auth0:widget -%}
+  </body>
+</html>
